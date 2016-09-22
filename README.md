@@ -17,14 +17,18 @@ Several components are going to be built with different libraries. It is neat to
 npm i -S react-router
 ```
 
-## step-2-router-v4
-[React router v4](https://react-router-website-uxmsaeusnn.now.sh/quick-start) is still in alpha. It is so simple. There are two routes, Home and About. Under Home, there is a simple todo.
+## step-2-routerv4
+[React router v4](https://react-router-website-uxmsaeusnn.now.sh/quick-start) is still in alpha. It is so simple. There are two routes, Home and About. 
+More details are here [React-router v4 FAQ](https://github.com/ReactTraining/react-router/tree/v4).
 ```
 npm i -S react-router@next
 ```
 
+## step-3-visualization
+```
+npm i -S react-vis react-addons-shallow-compare
+```
 
 
-
-
-
+# LICENSE
+MIT
