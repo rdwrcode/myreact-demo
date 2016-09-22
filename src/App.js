@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import NavLink from './NavLink';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Link, Match, Miss } from 'react-router';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>React Demo</h2>
-          <span><NavLink to="/home" >Home </NavLink></span>
-          <span><NavLink to="/about">About </NavLink></span>
-        </div>
+import Home from './Home';
+import About from './About';
+import NotFound from './NotFound';
+
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <ul>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/about'>About</Link></li>
+        </ul>
+        <hr/>
+          <Match exactly pattern='/' component={Home}/>
+          <Match pattern='/about' component={About}/>
+          <Miss component={NotFound}/>
       </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
 export default App;

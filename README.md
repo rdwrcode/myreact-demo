@@ -12,9 +12,19 @@ create-react-app myreact-demo
 
 ## step-1-route
 Several components are going to be built with different libraries. It is neat to separate them into several pages with [react-router](https://github.com/ReactTraining/react-router).
-[react-router v4](https://react-router-website-uxmsaeusnn.now.sh/quick-start) is still in alpha.
 
 ```
 npm i -S react-router
 ```
+
+## step-2-router-v4
+[React router v4](https://react-router-website-uxmsaeusnn.now.sh/quick-start) is still in alpha. It is so simple. There are two routes, Home and About. Under Home, there is a simple todo.
+```
+npm i -S react-router@next
+```
+
+
+
+
+
 
