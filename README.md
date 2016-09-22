@@ -25,8 +25,15 @@ npm i -S react-router@next
 ```
 
 ## step-3-visualization
+Try react-vis. 
 ```
 npm i -S react-vis react-addons-shallow-compare
+```
+
+## step-4-visualization
+Try victory
+```
+npm i -S victory
 ```
 
 
