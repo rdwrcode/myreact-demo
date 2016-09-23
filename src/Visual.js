@@ -5,73 +5,43 @@ import {
   YAxis, 
   HorizontalGridLines, 
   VerticalGridLines,
-  AreaSeries, 
   LineSeries,
   RadialChart } from 'react-vis';
 
-const Visual = () => (
-  <div>
-    <XYPlot
-      width={300}
-      height={300}>
-    <HorizontalGridLines />
-    <LineSeries
-      data={[
-        {x: 1, y: 10},
-        {x: 2, y: 5},
-        {x: 3, y: 15}
-      ]}/>
-    <XAxis />
-    <YAxis />
-    </XYPlot>
-    <XYPlot
-      width={300}
-      height={300}>
-      <VerticalGridLines />
-      <HorizontalGridLines />
-      <XAxis />
-      <YAxis />
-      <AreaSeries
-        data={[
-          {x: 1, y: 10},
-          {x: 2, y: 5},
-          {x: 3, y: 15}
-        ]}/>
-    </XYPlot>
-    <XYPlot
-      margin={{top: 40, right: 40, left: 10, bottom: 10}}
-      width={300}
-      height={300}>
-      <HorizontalGridLines />
-      <VerticalGridLines />
-      <XAxis orientation="top" title="X Axis" />
-      <YAxis orientation="right" title="Y Axis" />
-      <LineSeries
-        data={[
-          {x: 1, y: 3, z: 10},
-          {x: 2, y: 4, z: 10},
-          {x: 3, y: 8, z: 10},
-          {x: 4, y: 11, z: 10}
-        ]}/>
-      <LineSeries
-        data={null}/>
-      <LineSeries
-        data={[
-          {x: 1, y: 3, z: 10},
-          {x: 2, y: 9, z: 10},
-          {x: 3, y: 2, z: 10},
-          {x: 4, y: 11, z: 10}
-        ]}/>
-    </XYPlot>
-    <RadialChart
-      data={[
-        {angle: 2},
-        {angle: 3},
-        {angle: 5}
-      ]}
-      width={300}
-      height={300} />
-  </div>
-)
+const MSEC_DAILY = 86400000;
+
+class Visual extends React.Component {
+  render() {
+    const timestamp = Date.now();
+    return (
+      <div>
+        <XYPlot
+          xType="time"
+          width={300}
+          height={300}>
+          <HorizontalGridLines />
+          <VerticalGridLines />
+          <XAxis title="X Axis" />
+          <YAxis title="Y Axis" />
+          <LineSeries
+            data={[
+              {x: timestamp + MSEC_DAILY, y: 3},
+              {x: timestamp + MSEC_DAILY * 2, y: 5},
+              {x: timestamp + MSEC_DAILY * 3, y: 15},
+              {x: timestamp + MSEC_DAILY * 4, y: 12}
+            ]}/>
+        </XYPlot>
+        <RadialChart
+          data={[
+            {angle: 2},
+            {angle: 3},
+            {angle: 5}
+          ]}
+          width={300}
+          height={300} />
+      </div>
+    )
+  }
+}
 
 export default Visual;

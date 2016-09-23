@@ -1,0 +1,21 @@
+.Box {  
+  border: 2px solid #333;
+  padding: 0 20px;
+  margin: 0 6px;
+  max-width: 400px;
+}
+
+.Box--large {
+  width: 300px;
+  height: 300px;
+}
+
+.Box--medium {
+  width: 200px;
+  height: 200px;
+}
+    
+.Box--small {
+  width: 100px;
+  height: 100px;
+}
