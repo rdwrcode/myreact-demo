@@ -17,18 +17,18 @@ const App = () => {
     <Router>
       <div>
         <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/basic'>Basic</Link></li>
-          <li><Link to='/topics'>Topics</Link></li>
-          <li><Link to='/show'>Show</Link></li>
-          <li><Link to='/about'>About</Link></li>
+          <li><Link to='/myreact-demo'>Home</Link></li>
+          <li><Link to='/myreact-demo/basic'>Basic</Link></li>
+          <li><Link to='/myreact-demo/topics'>Topics</Link></li>
+          <li><Link to='/myreact-demo/show'>Show</Link></li>
+          <li><Link to='/myreact-demo/about'>About</Link></li>
         </ul>
         <hr/>
-          <Match exactly pattern='/' component={Home}/>
-          <Match pattern='/basic' component={Basic}/>
-          <Match pattern='/topics' component={Topics}/>
-          <Match pattern='/show' component={Show}/>
-          <Match pattern='/about' component={About}/>
+          <Match exactly pattern='/myreact-demo' component={Home}/>
+          <Match pattern='/myreact-demo/basic' component={Basic}/>
+          <Match pattern='/myreact-demo/topics' component={Topics}/>
+          <Match pattern='/myreact-demo/show' component={Show}/>
+          <Match pattern='/myreact-demo/about' component={About}/>
           <Miss component={NotFound}/>
       </div>
     </Router>
