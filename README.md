@@ -36,6 +36,15 @@ Try victory
 npm i -S victory
 ```
 
+## step-5-basics
+Add some basic exercises of react.
+
+## step-6-show
+Add animated buttons with react-motion.
+```
+npm i -S react-motion lodash lodash.range
+```
+
 
 # LICENSE
 MIT

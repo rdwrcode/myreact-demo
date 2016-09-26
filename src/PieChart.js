@@ -1,5 +1,5 @@
 import React from 'react';
-import { VictoryPie, VictoryAxis, VictoryBar } from 'victory';
+import { VictoryPie, VictoryAxis } from 'victory';
 
 const PieChart = () => (
   <div>
@@ -25,15 +25,6 @@ const PieChart = () => (
       <VictoryAxis dependentAxis
         padding={85}
         standalone={false}/>
-      <VictoryBar
-        data={[
-          {x: 1, y: 1},
-          {x: 2, y: 2},
-          {x: 3, y: 3},
-          {x: 4, y: 2},
-          {x: 5, y: 1}
-        ]}
-      />
     </svg>
     <VictoryPie />
   </div>
