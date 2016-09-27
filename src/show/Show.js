@@ -24,8 +24,13 @@ class Show extends Component {
   }
 
   handler(index) {
-    this.setState({index: index, iconName: childIcons[index], colorName: childColors[index], isClicked: true});
-    console.log(childColors[index]);
+    this.setState({
+      index: index, 
+      iconName: childIcons[index], 
+      colorName: childColors[index], 
+      isClicked: true
+    });
+    //console.log(childColors[index]);
   }
 
   render() {
