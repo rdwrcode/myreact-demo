@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Match, Miss } from 'react-router';
 
 import Home from './Home';
-import Basic from './Basic';
-import Topics from './Topics';
+//import Basic from './Basic';
+//import Topics from './Topics';
 //import Game from './three/Game';
 import Show from './show/Show';
 import About from './About';
@@ -18,15 +18,11 @@ const App = () => {
       <div>
         <ul>
           <li><Link to='/myreact-demo'>Home</Link></li>
-          <li><Link to='/myreact-demo/basic'>Basic</Link></li>
-          <li><Link to='/myreact-demo/topics'>Topics</Link></li>
           <li><Link to='/myreact-demo/show'>Show</Link></li>
           <li><Link to='/myreact-demo/about'>About</Link></li>
         </ul>
         <hr/>
           <Match exactly pattern='/myreact-demo' component={Home}/>
-          <Match pattern='/myreact-demo/basic' component={Basic}/>
-          <Match pattern='/myreact-demo/topics' component={Topics}/>
           <Match pattern='/myreact-demo/show' component={Show}/>
           <Match pattern='/myreact-demo/about' component={About}/>
           <Miss component={NotFound}/>

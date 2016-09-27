@@ -1,38 +1,19 @@
 import React, { Component } from 'react'; 
-//import TodoItem from './TodoItem'; 
-/*
-class TodoList extends Component {
-  
-  renderList(item) {
-    return(
-      <TodoItem key={item} todoItem={item}/>
-    )
-  }
-
-  render() {
-
-    const listData = [
-      'Read',
-      'write',
-      'code', 
-      'dump'
-    ];
-
-    return(
-      <div>
-        <p>Todo List</p>
-        {listData.map((item) => this.renderList(item))}
-      </div>
-    );
-  } 
-}
-*/
 
 class TodoList extends Component{
 
+  handleDone(index) {
+    this.props.cb(index);
+  }
+
   createItem(item){
     return (
-      <li key={item.id}>{item.text}</li>
+      <li key={item.id} 
+        onClick={this.handleDone.bind(this, item.id)}
+        style={item.done ? {textDecoration: 'line-through'} : {color: 'black'}}
+        >
+        {item.text}
+      </li>
     );
   }
 

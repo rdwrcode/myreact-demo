@@ -11,6 +11,18 @@ class AddItem extends Component {
     };
   }
 
+  handleItemClicked(index) {
+    console.log(index);
+    this.state.items.forEach(o => {
+      if(o.id === index) {
+        o.done = true;
+        console.log(index+" inside");
+      }
+    });
+    this.setState({items: this.state.items});
+    console.log(this.state.items);
+  }
+
   onChange(e){
     this.setState({ text: e.target.value });
   }
@@ -19,7 +31,8 @@ class AddItem extends Component {
     e.preventDefault();
     const newItem = { 
       text: this.state.text,
-      id: Date.now()    
+      id: Date.now(),
+      done: false    
     }
 
     const copyItems = [].concat(this.state.items); 
@@ -34,7 +47,7 @@ class AddItem extends Component {
   render(){
     return(
       <div>
-        <TodoList items={this.state.items} />
+        <TodoList items={this.state.items} cb={this.handleItemClicked.bind(this)}/>
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <input onChange={(event) => this.onChange(event)} value={this.state.text} />
           <button>{'Add Todo #' + (this.state.items.length + 1)}</button>

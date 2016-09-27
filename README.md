@@ -45,6 +45,12 @@ Add animated buttons with react-motion.
 npm i -S react-motion lodash lodash.range
 ```
 
+## todo-improvement
+To improve todo with completed functions and better styles, with redux
+```
+npm i -S uuid redux react-redux
+```
+
 
 # LICENSE
 MIT

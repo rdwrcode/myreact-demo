@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AnimatedButtons from './AnimatedButtons';
 import Message from './Message';
+import './Show.css';
 
 // fontawesome icons v4.6 http://fontawesome.io/icons/
 //const childIcons = ['pencil', 'at', 'camera', 'bell', 'comment', 'bolt', 'ban', 'code', 'sign-language'];
@@ -29,13 +30,15 @@ class Show extends Component {
 
   render() {
     return (
-      <div className="Show">
+      <div>
         <h2>Show</h2>
-        <Message status={this.state}/>
-        <AnimatedButtons
-          buttons={{mainX: 350, mainY: 450, icons: childIcons}} 
-          cb={{fn: this.handler}}
-        /> 
+        <div className="Show-content">
+          <Message status={this.state}/>
+          <AnimatedButtons
+            buttons={{mainX: 400, mainY: 320, icons: childIcons}} 
+            cb={{fn: this.handler}}
+          />
+        </div>
       </div>
     );
   }

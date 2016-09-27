@@ -9,6 +9,7 @@ const About = () => (
         <div className="About-header">
           <img src={logo} className="About-logo" alt="logo" />
           <h2>React Demo</h2>
+          <h3>Created by <a href="http://github.com/rdwrcode">rdwrcode</a></h3>
         </div>
       </div>
   </div>
