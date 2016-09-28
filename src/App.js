@@ -6,7 +6,8 @@ import Home from './Home';
 //import Topics from './Topics';
 //import Game from './three/Game';
 import Show from './show/Show';
-import Kanban from './kanban/Kanban';
+//import Kanban from './kanban/Kanban';
+import KanbanApp from './kanban/KanbanApp';
 import About from './About';
 
 import NotFound from './NotFound';
@@ -26,7 +27,7 @@ const App = () => {
         <hr/>
           <Match exactly pattern='/myreact-demo' component={Home}/>
           <Match pattern='/myreact-demo/show' component={Show}/>
-          <Match pattern='/myreact-demo/kanban' component={Kanban}/>
+          <Match pattern='/myreact-demo/kanban' component={KanbanApp}/>
           <Match pattern='/myreact-demo/about' component={About}/>
           <Miss component={NotFound}/>
       </div>
