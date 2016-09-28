@@ -57,7 +57,7 @@ class AnimatedButtons extends React.Component {
   }
 
   componentWillMount() {
-    console.log(this.props.buttons.icons.length);
+    //console.log(this.props.buttons.icons.length);
     if(this.props.buttons) {
       this.setState({
         mainX: this.props.buttons.mainX,

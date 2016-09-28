@@ -51,6 +51,8 @@ To improve todo with completed functions and better styles, with redux
 npm i -S uuid redux react-redux
 ```
 
+## add kanban from [survivejs](http://survivejs.com)
+
 
 # LICENSE
 MIT
