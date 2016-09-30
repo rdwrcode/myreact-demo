@@ -23,6 +23,45 @@ const noteTarget = {
 };
 
 class Lane extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.deleteLane = this.deleteLane.bind(this);
+  }
+
+  deleteLane(lane, e) {
+    e.stopPropagation();
+
+    const laneId = lane.id;
+
+    console.log('deleteLane: landId='+laneId);
+
+    // Clean up notes
+    lane.notes.forEach(noteId => {
+      this.props.detachFromLane(laneId, noteId);
+      this.props.deleteNote(noteId);
+    });
+
+    this.props.deleteLane(laneId);
+  }
+
+  addNote(laneId, e) {
+    e.stopPropagation();
+
+    const o = this.props.createNote({
+      task: 'New task'
+    });
+    this.props.attachToLane(laneId, o.note.id);
+  }
+
+  deleteNote(laneId, noteId, e) {
+    e.stopPropagation();
+
+    this.props.detachFromLane(laneId, noteId);
+    this.props.deleteNote(noteId);
+  }
+
   render() {
     const {connectDropTarget, lane, laneNotes, ...props} = this.props;
     const laneId = lane.id;
@@ -48,33 +87,6 @@ class Lane extends React.Component {
           onDelete={(id, e) => this.deleteNote(laneId, id, e)} />
       </div>
     );
-  }
-  deleteLane(lane, e) {
-    e.stopPropagation();
-
-    const laneId = lane.id;
-
-    // Clean up notes
-    lane.notes.forEach(noteId => {
-      this.props.detachFromLane(laneId, noteId);
-      this.props.deleteNote(noteId);
-    });
-
-    this.props.deleteLane(laneId);
-  }
-  addNote(laneId, e) {
-    e.stopPropagation();
-
-    const o = this.props.createNote({
-      task: 'New task'
-    });
-    this.props.attachToLane(laneId, o.note.id);
-  }
-  deleteNote(laneId, noteId, e) {
-    e.stopPropagation();
-
-    this.props.detachFromLane(laneId, noteId);
-    this.props.deleteNote(noteId);
   }
 }
 

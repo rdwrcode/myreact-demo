@@ -8,6 +8,7 @@ import './Kanban.css';
 const APP_STORAGE = 'redux_kanban';
 
 const store = configureStore(storage.get(APP_STORAGE) || {});
+console.log(store.getState());
 
 store.subscribe(() => {
   if(!storage.get('debug')) {
