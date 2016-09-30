@@ -8,7 +8,7 @@ class TodoList extends Component{
 
   createItem(item){
     return (
-      <li key={item.id} 
+      <li className="item" key={item.id} 
         onClick={this.handleDone.bind(this, item.id)}
         style={item.done ? {textDecoration: 'line-through'} : {color: 'black'}}
         >

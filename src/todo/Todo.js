@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import TodoBanner from './TodoBanner'; 
 import AddItem from './AddItem'; 
 
+import './Todo.css';
+
 class Todo extends Component {
   render() {
     return (

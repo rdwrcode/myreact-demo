@@ -1,4 +1,6 @@
 # myreact-demo
+
+[myreact-demo live](http://rdwrcode.github.io/myreact-demo)
 This project is to use several libraries related to react by putting them into a simple app.
 Everything is a _react_ **component**.
 
@@ -52,7 +54,7 @@ npm i -S uuid redux react-redux
 ```
 
 ## add kanban from [survivejs](http://survivejs.com)
-
+Rewrite the kanban to remove warnings.
 
 # LICENSE
 MIT
