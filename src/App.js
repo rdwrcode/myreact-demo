@@ -16,7 +16,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <ul>
+        <ul className="app-navigation">
           <li><Link to='/myreact-demo'>Home</Link></li>
           <li><Link to='/myreact-demo/show'>Show</Link></li>
           <li><Link to='/myreact-demo/kanban'>Kanban</Link></li>
