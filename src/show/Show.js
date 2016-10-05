@@ -40,7 +40,7 @@ class Show extends Component {
         <div className="Show-content">
           <Message status={this.state}/>
           <AnimatedButtons
-            buttons={{mainX: 400, mainY: 350, icons: childIcons}} 
+            buttons={{mainX: 400, mainY: 325, icons: childIcons}} 
             cb={{fn: this.handler}}
           />
         </div>
